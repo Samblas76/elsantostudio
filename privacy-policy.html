@@ -39,19 +39,25 @@
         aplicación, estos datos se eliminarán permanentemente.
     </p>
 
-    <h2>3. Imágenes y escaneo de monedas</h2>
+    <h2>3. Escáner de monedas (versión Premium)</h2>
     <p>
-        La función de escaneo utiliza la cámara o la galería para que puedas
-        fotografiar una moneda. El reconocimiento del texto de la moneda se
-        realiza íntegramente en tu dispositivo: las fotos no se envían a ningún
-        servidor ni se guardan fuera de tu móvil.
+        Si usas el escáner, las fotos de la moneda que hagas o elijas se envían de forma
+        segura a nuestro servidor (alojado en <strong>Supabase</strong>, Unión Europea) y de ahí al
+        servicio de inteligencia artificial de <strong>Anthropic</strong>, que identifica la moneda
+        (valor, año y diseño). Las fotos solo se usan para esa identificación: no las guardamos
+        en nuestro servidor ni las asociamos a tu identidad.
+    </p>
+    <p>
+        Para aplicar un límite diario de escaneos, la app genera un identificador anónimo y
+        aleatorio para tu dispositivo y guardamos cuántos escaneos se han hecho cada día con él.
+        Este identificador no contiene datos personales.
     </p>
 
     <h2>4. Permisos de la aplicación</h2>
     <p>La aplicación puede solicitar los siguientes permisos:</p>
     <ul>
-        <li><strong>Cámara:</strong> para la función de escaneo de monedas.</li>
-        <li><strong>Internet:</strong> para gestionar las compras dentro de la app a través de Google Play y abrir enlaces externos (por ejemplo, el contacto o esta política).</li>
+        <li><strong>Cámara y fotos:</strong> para fotografiar o elegir la moneda que quieres escanear.</li>
+        <li><strong>Internet:</strong> para el escáner de monedas, las compras dentro de la app a través de Google Play y abrir enlaces externos (por ejemplo, el contacto o esta política).</li>
     </ul>
     <p>No se solicitan permisos de ubicación, contactos, micrófono ni ningún otro dato personal.</p>
 
@@ -59,7 +65,8 @@
     <p>La aplicación utiliza los siguientes servicios de terceros:</p>
     <ul>
         <li><strong>Google Play:</strong> para las compras dentro de la aplicación. Los pagos los gestiona Google según su propia política de privacidad; El Santo Studio no recibe tus datos de pago.</li>
-        <li><strong>Google ML Kit:</strong> reconocimiento de texto en las fotos de monedas, ejecutado en el propio dispositivo.</li>
+        <li><strong>Supabase:</strong> servidor del escáner de monedas y recuento anónimo de escaneos diarios.</li>
+        <li><strong>Anthropic:</strong> identificación de monedas por inteligencia artificial a partir de las fotos enviadas con el escáner.</li>
     </ul>
 
     <h2>6. Seguridad</h2>
